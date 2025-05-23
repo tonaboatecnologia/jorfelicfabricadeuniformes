@@ -1,0 +1,68 @@
+/* Estilo da seção */
+.instagram-area {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+/* Slider ocupa toda a largura */
+.image-slider {
+    position: relative;
+    width: 100vw; /* Ocupa toda a largura da viewport */
+    height: 100vh; /* Altura total da tela */
+    overflow: hidden;
+}
+
+/* Container de slides */
+.slider-container {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 400%; /* 4 imagens */
+}
+
+/* Cada slide ocupa 100% da largura da tela */
+.slide {
+    min-width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* As imagens ocupam toda a tela sem distorcer */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Controles de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .prev, .next {
+        padding: 10px;
+        font-size: 18px;
+    }
+}
